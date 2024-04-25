@@ -1,0 +1,19 @@
+
+{% block header %}
+
+<header>
+<p> Ceci est le header </p>
+</header>
+{% if app.request.uri != "http://127.0.0.1:8001/" %}
+    <a href="http://127.0.0.1:8001/"> GO HOME !!!!</a>
+    <br>
+    <a href="{{ path('home') }}">GO HOMEDEUX !!!!</a>
+
+{% else %}
+    <a href="{{ path('twigPage') }}">GO TWIIIIIIIIIIIIIIIIIG !!!!</a>
+
+
+{% endif %}
+  
+
+{% endblock header %}
